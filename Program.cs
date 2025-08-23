@@ -1,12 +1,12 @@
-﻿var cookiesRecipesApp = new CookiesRecipesApp();
+﻿var cookiesRecipesApp = new CookiesRecipesApp(new RecipesRepository(), new RecipesConsoleUserInteraction());
 cookiesRecipesApp.Run();
 
 public class CookiesRecipesApp
 {
-  private readonly RecipesRepository _recipesRepository;
-  private readonly RecipesUserInteraction _recipesUserInteraction;
+  private readonly IRecipesRepository _recipesRepository;
+  private readonly IRecipesUserInteraction _recipesUserInteraction;
 
-  public CookiesRecipesApp(RecipesRepository recipesRepository, RecipesUserInteraction recipesUserInteraction)
+  public CookiesRecipesApp(IRecipesRepository recipesRepository, IRecipesUserInteraction recipesUserInteraction)
   {
     _recipesRepository = recipesRepository;
     _recipesUserInteraction = recipesUserInteraction;
@@ -34,15 +34,37 @@ public class CookiesRecipesApp
     {
       _recipesUserInteraction.ShowMessage("No ingredients have been selected.\n Recipe will not be saved.");
     }
+
+    _recipesUserInteraction.Exit();
   }
 }
 
-public class RecipesUserInteraction
+public interface IRecipesUserInteraction
 {
+  void ShowMessage(string message);
+  void Exit();
+}
+
+public interface IRecipesRepository
+{
+  
+}
+
+public class RecipesConsoleUserInteraction : IRecipesUserInteraction
+{
+  public void ShowMessage(string message)
+  {
+    System.Console.WriteLine(message);
+  }
+  public void Exit()
+  {
+    Console.WriteLine("Press any key to close.");
+    Console.ReadKey();
+  }
 
 }
 
-public class RecipesRepository
+public class RecipesRepository : IRecipesRepository
 {
   
 }
