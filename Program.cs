@@ -68,17 +68,3 @@ public class RecipesRepository : IRecipesRepository
 {
 
 }
-
-public class MainApp
-{
-  private readonly IMainUserInterface _mainUserInterface;
-  private readonly IMainColorTheme _mainColorTheme;
-  private readonly IMainCommunicationMethod _mainCommunicationMethod;
-
-  public MainApp(IMainUserInterface mainUserInterface, IMainColorTheme mainColorTheme, IMainCommunicationMethod mainCommunicationMethod)
-  {
-    _mainUserInterface = mainUserInterface;
-    _mainColorTheme = mainColorTheme;
-    _mainCommunicationMethod = mainCommunicationMethod;
-  } 
-}
