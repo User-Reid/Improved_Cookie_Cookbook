@@ -1,0 +1,5 @@
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\obj\Debug\net9.0\Improved_Cookie_Cookbook.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\obj\Debug\net9.0\Improved_Cookie_Cookbook.AssemblyInfoInputs.cache
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\obj\Debug\net9.0\Improved_Cookie_Cookbook.AssemblyInfo.cs
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\obj\Debug\net9.0\Improved_Cookie_Cookbook.csproj.CoreCompileInputs.cache
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\obj\Debug\net9.0\Improved_Cookie_Cookbook.sourcelink.json
