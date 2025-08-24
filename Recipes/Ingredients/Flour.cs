@@ -1,10 +1,9 @@
-namespace Improved_Cookie_Cookbook.Recipe
+namespace Improved_Cookie_Cookbook.Recipe.Ingredients
 {
-  public partial class Recipe
-  {
+
     public abstract class Flour : Ingredient
     {
       public override string PreperationInstructions => $"Sieve. {base.PreperationInstructions}";
     }
-  }
+  
 }

@@ -1,11 +1,10 @@
-namespace Improved_Cookie_Cookbook.Recipe
+namespace Improved_Cookie_Cookbook.Recipe.Ingredients
 {
-  public partial class Recipe
-  {
+
     public class Cinnamon : Spice
     {
       public override int Id => 7;
       public override string Name => "Cinnamon";
     }
-  }
+  
 }

@@ -3,3 +3,13 @@ C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\obj\Debug
 C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\obj\Debug\net9.0\Improved_Cookie_Cookbook.AssemblyInfo.cs
 C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\obj\Debug\net9.0\Improved_Cookie_Cookbook.csproj.CoreCompileInputs.cache
 C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\obj\Debug\net9.0\Improved_Cookie_Cookbook.sourcelink.json
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\bin\Debug\net9.0\Improved_Cookie_Cookbook.exe
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\bin\Debug\net9.0\Improved_Cookie_Cookbook.deps.json
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\bin\Debug\net9.0\Improved_Cookie_Cookbook.runtimeconfig.json
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\bin\Debug\net9.0\Improved_Cookie_Cookbook.dll
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\bin\Debug\net9.0\Improved_Cookie_Cookbook.pdb
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\obj\Debug\net9.0\Improved_Cookie_Cookbook.dll
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\obj\Debug\net9.0\refint\Improved_Cookie_Cookbook.dll
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\obj\Debug\net9.0\Improved_Cookie_Cookbook.pdb
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\obj\Debug\net9.0\Improved_Cookie_Cookbook.genruntimeconfig.cache
+C:\Users\aerma\Downloads\UT-Bootcamp\Udemy\C#\Improved_Cookie_Cookbook\obj\Debug\net9.0\ref\Improved_Cookie_Cookbook.dll

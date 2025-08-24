@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Improved_Cookie_Cookbook/1.0.0": {
+        "runtime": {
+          "Improved_Cookie_Cookbook.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Improved_Cookie_Cookbook/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
