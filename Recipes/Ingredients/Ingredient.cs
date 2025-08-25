@@ -1,4 +1,4 @@
-namespace Improved_Cookie_Cookbook.Recipe.Ingredients
+namespace Improved_Cookie_Cookbook.Recipes.Ingredients
 {
   public abstract class Ingredient
   {
@@ -6,5 +6,5 @@ namespace Improved_Cookie_Cookbook.Recipe.Ingredients
     public abstract string Name { get; }
     public virtual string PreperationInstructions => "Add to other ingredients.";
     public override string ToString() => $"{Id}: {Name}";
-    }
+  }
 }

@@ -1,4 +1,4 @@
-namespace Improved_Cookie_Cookbook.Recipe.Ingredients
+namespace Improved_Cookie_Cookbook.Recipes.Ingredients
 {
     public class WheatFlour : Flour
     {

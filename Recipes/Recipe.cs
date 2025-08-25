@@ -1,6 +1,6 @@
-using Improved_Cookie_Cookbook.Recipe.Ingredients;
+using Improved_Cookie_Cookbook.Recipes.Ingredients;
 
-namespace Improved_Cookie_Cookbook.Recipe
+namespace Improved_Cookie_Cookbook.Recipes
 {
   public class Recipe
   {

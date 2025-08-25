@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Improved_Cookie_Cookbook")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ff4835cb53a0ce21fb9c04ae42501f87f986337")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3fc238b66504de326831cba54e06a9ddf802a69")]
 [assembly: System.Reflection.AssemblyProductAttribute("Improved_Cookie_Cookbook")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Improved_Cookie_Cookbook")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
