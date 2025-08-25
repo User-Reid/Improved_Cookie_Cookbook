@@ -1,10 +1,41 @@
-﻿using Improved_Cookie_Cookbook.Recipe;
+﻿using System.Text.Json;
+using Improved_Cookie_Cookbook.Recipe;
 using Improved_Cookie_Cookbook.Recipe.Ingredients;
+
+const FileFormat Format = FileFormat.Json;
+
+IStringsRepository stringsRepository = Format == FileFormat.Json ? new StringsJsonRepository() : new StringsJsonRepository();
+
+const string FileName = "recipes";
+var fileMetaData = new FileMetadata(FileName, Format);
 
 var ingredientsRegister = new IngredientsRegister();
 
-var cookiesRecipesApp = new CookiesRecipesApp(new RecipesRepository(new StringsTextualRepository(), ingredientsRegister), new RecipesConsoleUserInteraction(ingredientsRegister));
-cookiesRecipesApp.Run("recipes.txt");
+var cookiesRecipesApp = new CookiesRecipesApp(new RecipesRepository(new StringsJsonRepository(), ingredientsRegister), new RecipesConsoleUserInteraction(ingredientsRegister));
+cookiesRecipesApp.Run(fileMetaData.ToPath());
+
+public class FileMetadata
+{
+  public string Name { get; }
+  public FileFormat Format { get; }
+
+  public FileMetadata(string name, FileFormat format)
+  {
+    Name = name;
+    Format = format;
+  }
+  public string ToPath() => $"{Name}.{Format.AsFileExtension()}";
+
+}
+  public static class FileFormatExtensions {
+    public static string AsFileExtension(this FileFormat fileFormat) => fileFormat == FileFormat.Json ? "json" : "txt";
+  }
+
+public enum FileFormat
+{
+  Json,
+  Txt
+}
 
 public class CookiesRecipesApp
 {
@@ -244,5 +275,23 @@ class StringsTextualRepository : IStringsRepository
   public void Write(string filePath, List<string> strings)
   {
     File.WriteAllText(filePath, string.Join(Seperator, strings));
+  }
+}
+
+class StringsJsonRepository : IStringsRepository
+{
+  public List<string> Read(string filePath)
+  {
+    if (File.Exists(filePath))
+    {
+      var fileContents = File.ReadAllText(filePath);
+      return JsonSerializer.Deserialize<List<string>>(fileContents);
+    }
+    return new List<string>();
+  }
+
+  public void Write(string filePath, List<string> strings)
+  {
+    File.WriteAllText(filePath, JsonSerializer.Serialize(strings));
   }
 }
