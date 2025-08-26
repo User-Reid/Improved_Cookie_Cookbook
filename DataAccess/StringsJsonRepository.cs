@@ -1,15 +1,17 @@
+using System.Text.Json;
+
 namespace Improved_Cookie_Cookbook.DataAccess
 {
   class StringsJsonRepository : StringsRepository
-{
-  protected override string StringsToText(List<string> strings)
   {
-    return JsonSerializer.Serialize(strings);
-  }
+    protected override string StringsToText(List<string> strings)
+    {
+      return JsonSerializer.Serialize(strings);
+    }
 
-  protected override List<string> TextToStrings(string fileContents)
-  {
+    protected override List<string> TextToStrings(string fileContents)
+    {
       return JsonSerializer.Deserialize<List<string>>(fileContents);
+    }
   }
-}
 }
