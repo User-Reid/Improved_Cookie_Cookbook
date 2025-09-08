@@ -29,33 +29,40 @@ namespace Improved_Cookie_Cookbook.App
       }
     }
 
-  public void PromptToCreateRecipe() => System.Console.WriteLine($"Create a new cookie recipes! Available ingredients are:{string.Join(Environment.NewLine, _ingredientsRegister.All)}");
+    // public void PromptToCreateRecipe() => System.Console.WriteLine($"Create a new cookie recipes! Available ingredients are:{string.Join(Environment.NewLine, _ingredientsRegister.All)}");
+
+    public void PromptToCreateRecipe()
+    {
+      System.Console.WriteLine("Create a new cookie recipe! Available ingredients are:");
+
+      System.Console.WriteLine(string.Join(Environment.NewLine, _ingredientsRegister.All));
+    }
 
   public IEnumerable<Ingredient> ReadIngredientsFromUser()
-  {
-    bool shallStop = false;
-    var ingredients = new List<Ingredient>();
-
-    while (!shallStop)
     {
-      System.Console.WriteLine("Add an ingredient by its ID,\r\nor type anything else if finished.");
+      bool shallStop = false;
+      var ingredients = new List<Ingredient>();
 
-      var userInput = Console.ReadLine();
-
-      if (int.TryParse(userInput, out int id))
+      while (!shallStop)
       {
-        var selectedIngredient = _ingredientsRegister.GetById(id);
-        if (selectedIngredient is not null)
+        System.Console.WriteLine("Add an ingredient by its ID,\r\nor type anything else if finished.");
+
+        var userInput = Console.ReadLine();
+
+        if (int.TryParse(userInput, out int id))
         {
-          ingredients.Add(selectedIngredient);
+          var selectedIngredient = _ingredientsRegister.GetById(id);
+          if (selectedIngredient is not null)
+          {
+            ingredients.Add(selectedIngredient);
+          }
+        }
+        else
+        {
+          shallStop = true;
         }
       }
-      else
-      {
-        shallStop = true;
-      }
+      return ingredients;
     }
-    return ingredients;
-  }
 }
 }
