@@ -6,47 +6,15 @@ namespace Improved_Cookie_Cookbook.App
   public class RecipesConsoleUserInteraction : IRecipesUserInteraction
 {
   private readonly IIngredientsRegister _ingredientsRegister;
-  public RecipesConsoleUserInteraction(IIngredientsRegister ingredientsRegister)
-  {
-    _ingredientsRegister = ingredientsRegister;
-  }
-  public void ShowMessage(string message)
-  {
-    System.Console.WriteLine(message);
-  }
-  public void Exit()
-  {
-    Console.WriteLine("Press any key to close.");
-    Console.ReadKey();
-  }
-  public void PrintExistingRecipes(IEnumerable<Recipe> allRecipes)
-  {
-    if (allRecipes.Count() > 0)
-    {
-      System.Console.WriteLine($"Existing recipes are: \n");
+  public RecipesConsoleUserInteraction(IIngredientsRegister ingredientsRegister) => _ingredientsRegister = ingredientsRegister;
 
-      var counter = 1;
-      foreach (var recipe in allRecipes)
-      {
-        System.Console.WriteLine($"*****{counter}*****");
-        System.Console.WriteLine(recipe);
-        System.Console.WriteLine();
-        ++counter;
-      }
-    }
-    else
-    {
-      System.Console.WriteLine("There are no exisiting recipes to print.");
-    }
-  }
-  public void PromptToCreateRecipe()
-  {
-    System.Console.WriteLine("Create a new cookie recipe! Available ingredients are:");
-    foreach (var ingredient in _ingredientsRegister.All)
-    {
-      System.Console.WriteLine(ingredient);
-    }
-  }
+  public void ShowMessage(string message) => System.Console.WriteLine(message);
+  
+  public void Exit() => System.Console.WriteLine($"Press any key to close\n{Console.ReadKey()}");
+
+    public void PrintExistingRecipes(IEnumerable<Recipe> allRecipes) => System.Console.WriteLine(allRecipes.Any() ? $"Existing recipes are: \n{string.Join(Environment.NewLine, allRecipes.Select((recipe, index) => $"*****{index + 1}*****\n{recipe}\n"))}" : $"There are no existing recipes to print.");
+
+  public void PromptToCreateRecipe() => System.Console.WriteLine($"Create a new cookie recipes! Available ingredients are:{string.Join(Environment.NewLine, _ingredientsRegister.All)}");
 
   public IEnumerable<Ingredient> ReadIngredientsFromUser()
   {
