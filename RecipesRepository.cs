@@ -33,7 +33,7 @@ public class RecipesRepository : IRecipesRepository
   // .Select(textualId => _ingredientsRegister.GetById(int.Parse(textualId)))
   // .ToList());
 
-  public void Write(string filePath, List<Recipe> allRecipes) => _stringsRepository.Write(filePath, allRecipes.Select(recipe => string.Join(Seperator, recipe.Ingredients.Select(ingredient => ingredient.Id))).ToList());
+  // public void Write(string filePath, List<Recipe> allRecipes) => _stringsRepository.Write(filePath, allRecipes.Select(recipe => string.Join(Seperator, recipe.Ingredients.Select(ingredient => ingredient.Id))).ToList());
 
   public void Write(string filePath, List<Recipe> allRecipes)
   {
