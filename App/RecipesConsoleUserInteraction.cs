@@ -12,7 +12,22 @@ namespace Improved_Cookie_Cookbook.App
   
   public void Exit() => System.Console.WriteLine($"Press any key to close\n{Console.ReadKey()}");
 
-    public void PrintExistingRecipes(IEnumerable<Recipe> allRecipes) => System.Console.WriteLine(allRecipes.Any() ? $"Existing recipes are: \n{string.Join(Environment.NewLine, allRecipes.Select((recipe, index) => $"*****{index + 1}*****\n{recipe}\n"))}" : $"There are no existing recipes to print.");
+    // public void PrintExistingRecipes(IEnumerable<Recipe> allRecipes) => System.Console.WriteLine(allRecipes.Any() ? $"Existing recipes are: \n{string.Join(Environment.NewLine, allRecipes.Select((recipe, index) => $"*****{index + 1}*****\n{recipe}\n"))}" : $"There are no existing recipes to print.");
+
+    public void PrintExistingRecipes(IEnumerable<Recipe> allRecipes)
+    {
+      if (allRecipes.Any())
+      {
+        System.Console.WriteLine($"Existing recipes are:\n");
+
+        var allRecipesAsStrings = allRecipes
+        .Select((recipe, index) => @$"*****{index + 1}*****
+        {recipe}");
+
+        System.Console.WriteLine(string.Join(Environment.NewLine, allRecipesAsStrings));
+        System.Console.WriteLine();
+      }
+    }
 
   public void PromptToCreateRecipe() => System.Console.WriteLine($"Create a new cookie recipes! Available ingredients are:{string.Join(Environment.NewLine, _ingredientsRegister.All)}");
 
